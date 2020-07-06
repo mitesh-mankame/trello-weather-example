@@ -1,0 +1,9 @@
+#Parcel js cache
+.cache/
+
+#dist
+dist/
+
+#node module
+node_modules/
+node_modules
