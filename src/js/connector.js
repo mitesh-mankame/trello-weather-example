@@ -13,10 +13,10 @@ window.TrelloPowerUp.initialize({
                 .then(weatherData =>{
                     console.log('Weather Data',weatherData)
                     return [{
-                        text: weatherData.main.temp
+                        text: weatherData.main.temp.toString()
                     },
                     {
-                        text: weatherData.wind.speed
+                        text: weatherData.wind.speed.toString()
                     }
                 ]
                 });
