@@ -8,7 +8,7 @@ window.TrelloPowerUp.initialize({
 
             if(card.coordinates){
                 // fetch weather data
-                fetch(`https://cors-anywhere.herokuapp.com/https://samples.openweathermap.org/data/2.5/weather?lat=${card.coordinates.latitude}&lng=${card.coordinates.longitude}&appid=%%WEATHER_KEY%%`)
+                fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${card.coordinates.latitude}&lng=${card.coordinates.longitude}&appid=%%WEATHER_KEY%%`)
                 .then(response => response.json())
                 .then(weatherData =>{
                     return [{
