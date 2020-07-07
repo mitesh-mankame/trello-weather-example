@@ -19,7 +19,7 @@ getWeatherDataBadges = (weatherData)=>{
     if(!weatherData) return[];
     return  [{
                     title:'Temprature',
-                    text:`${temprature.toFixed()} °F`
+                    text:`${weatherData.main.formattedTemprature}`
                 },
                 {
                     title:'Wind Speed',
