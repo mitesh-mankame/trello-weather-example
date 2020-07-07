@@ -41,15 +41,15 @@ window.TrelloPowerUp.initialize({
                    // console.log('Weather Data',weatherData)
                    let temprature = (weatherData.main.temp - 273.15) * 9/5 + 32;
                     let returnArr = [{
-                        title:'Temprature',
+                       
                         text:`${temprature.toFixed()} °F`
                     },
                     {
-                        title:'Wind Speed',
+                     
                         text:`🌬️${weatherData.wind.speed.toString()} m/h`
                     },
                     {
-                        title:'Conditions',
+                        
                         icon:`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`,
                         text:weatherData.weather[0].main
                     }
@@ -74,12 +74,15 @@ window.TrelloPowerUp.initialize({
                    // console.log('Weather Data',weatherData)
                    let temprature = (weatherData.main.temp - 273.15) * 9/5 + 32;
                     let returnArr = [{
+                        title:'Temprature',
                         text:`${temprature.toFixed()} °F`
                     },
                     {
+                        title:'Wind Speed',
                         text:`🌬️${weatherData.wind.speed.toString()} m/h`
                     },
                     {
+                        title:'Conditions',
                         icon:`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`,
                         text:weatherData.weather[0].main
                     }
