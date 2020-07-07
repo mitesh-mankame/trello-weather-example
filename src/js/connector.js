@@ -15,14 +15,8 @@ window.TrelloPowerUp.initialize({
                     return [
                     {
                         text:'Hello World'
-                    }, 
-                    {
-                        text: weatherData.main.temp.toString()
-                        
-                    },
-                    {
-                        text: weatherData.wind.speed.toString()
                     }
+                   
                 ]
                 });
             }
