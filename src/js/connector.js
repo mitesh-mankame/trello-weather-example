@@ -53,8 +53,7 @@ window.TrelloPowerUp.initialize({
                         icon:`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`,
                         text:weatherData.weather[0].main
                     }
-                ]
-                  
+                ]                  
                     return returnArr
                 });
             }
