@@ -12,7 +12,7 @@ window.TrelloPowerUp.initialize({
                    // console.log('Weather Data',weatherData)
                    let temprature = (weatherData.main.temp - 273.15) * 9/5 + 32;
                     let returnArr = [{
-                        text:temprature
+                        text:`{temprature.toFixed()} &#8457; F`
                     },
                     {
                         text:`🌬️${weatherData.wind.speed.toString()} m/h`
