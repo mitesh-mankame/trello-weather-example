@@ -17,18 +17,20 @@ window.TrelloPowerUp.initialize({
                 .then(response => response.json())
                 .then(weatherData =>{
                     console.log('Weather Data',weatherData)
-                    return [
-                    {
+                   
+                    let returnArr = [{
                         text:card.coordinates.longitude.toString()
-                    }
-                ]
+                    }]
+                    console.log('First: ',returnArr)
+                    return returnArr
                 });
             }else{
-                return [
-                    {
-                        text:card.pos
-                    }
-                ]
+
+                let returnArr = [{
+                    text:card.pos.toString()
+                }]
+                console.log('Second: ',returnArr)
+                return returnArr;
             }
 
            
