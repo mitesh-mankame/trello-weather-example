@@ -4,7 +4,7 @@ window.TrelloPowerUp.initialize({
         //Return card badges
         return t.card('coordinates')
         .then(function(card){
-            console.log(card)
+            //console.log(card)
 
             if(card.coordinates){
                 // fetch weather data
@@ -14,14 +14,16 @@ window.TrelloPowerUp.initialize({
                     console.log('Weather Data',weatherData)
                     return [
                     {
-                        text:'Hello World'
+                        text:card.coordinates
                     }
                    
                 ]
                 });
+            }else{
+                return []
             }
 
-            return []
+           
         })
         
     }
