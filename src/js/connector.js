@@ -13,7 +13,7 @@ window.TrelloPowerUp.initialize({
             if(card.coordinates){
                 console.log('Lat: '+card.coordinates.latitude,"Lng : "+card.coordinates.longitude)
                 // fetch weather data
-                fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${card.coordinates.latitude}&lon=${card.coordinates.longitude}&appid=%%WEATHER_KEY%%`)
+                return fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${card.coordinates.latitude}&lon=${card.coordinates.longitude}&appid=%%WEATHER_KEY%%`)
                 .then(response => response.json())
                 .then(weatherData =>{
                     console.log('Weather Data',weatherData)
@@ -24,17 +24,11 @@ window.TrelloPowerUp.initialize({
                     console.log('First: ',returnArr)
                     return returnArr
                 });
-            }else{
-
-                let returnArr = [{
-                    text:card.pos.toString()
-                }]
-                console.log('Second: ',returnArr)
-                return returnArr;
             }
-
+            return [];
            
         })
+      
         
     }
 })
