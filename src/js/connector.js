@@ -41,7 +41,7 @@ window.TrelloPowerUp.initialize({
           }
         };
       },
-      'card-badges': function(t){
+      'card-detail-badges': function(t){
         //Return card badges
         return t.card('coordinates')
         .then(function(card){        
