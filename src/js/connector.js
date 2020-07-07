@@ -18,7 +18,7 @@ const getWeatherData=(t)=>{
         .then(response => response.json())
         .then(weatherData =>{  
             const temprature=  (weatherData.main.temp - 273.15) * 9/5 + 32;
-            weatherData.main.formattedTemprature =  `${temprature} °F`;
+            weatherData.main.formattedTemprature =  `${temprature.toFixed()} °F`;
 
             if(t.memberCanWriteToModel('card')){               
             t.set('card', 'shared', 'locationDetails',{
@@ -30,7 +30,7 @@ const getWeatherData=(t)=>{
                 weatherdata:weatherData
             })
         }
-        console.log('From Serive ',weatherdata)
+        console.log('From Serive ',weatherData)
             return weatherData
         });
 
