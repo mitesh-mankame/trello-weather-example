@@ -10,13 +10,18 @@ window.TrelloPowerUp.initialize({
                 .then(response => response.json())
                 .then(weatherData =>{
                    // console.log('Weather Data',weatherData)
-                   
+                   let temprature = (weatherData.main.temp - 273.15) * 9/5 + 32;
                     let returnArr = [{
-                        text:weatherData.main.temp.toString()
+                        text:temprature
                     },
                     {
-                        text:weatherData.wind.speed.toString()
-                    }]
+                        text:`🌬️${weatherData.wind.speed.toString()} m/h`
+                    },
+                    {
+                        icon:`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`,
+                        text:weatherData.weather[0].main
+                    }
+                ]
                   
                     return returnArr
                 });
